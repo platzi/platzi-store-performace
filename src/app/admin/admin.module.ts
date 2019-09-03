@@ -13,12 +13,17 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
-import { DatesComponent } from './components/dates/dates.component';
-import { PdfComponent } from './components/pdf/pdf.component';
-
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent, ProductsListComponent, FormProductComponent, ProductEditComponent, DatesComponent, PdfComponent],
+  declarations: [
+    ProductFormComponent,
+    NavComponent,
+    TableComponent,
+    DashboardComponent,
+    ProductsListComponent,
+    FormProductComponent,
+    ProductEditComponent
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,

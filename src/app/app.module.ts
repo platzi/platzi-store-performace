@@ -6,6 +6,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
+import { QuicklinkModule } from 'ngx-quicklink';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -23,6 +25,7 @@ import { environment } from './../environments/environment';
   ],
   imports: [
     BrowserModule,
+    QuicklinkModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,
@@ -31,7 +34,7 @@ import { environment } from './../environments/environment';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

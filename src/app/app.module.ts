@@ -22,7 +22,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     QuicklinkModule,
     AppRoutingModule,
     FormsModule,

@@ -3,13 +3,6 @@ import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectionStrategy
 import { EmployeeData } from './../../../../core/models/employee.model';
 
 
-const fibonacci = (num: number): number => {
-  if (num === 1 || num === 2) {
-    return 1;
-  }
-  return fibonacci(num - 1) + fibonacci(num - 2);
-};
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -33,11 +26,6 @@ export class ListComponent implements OnInit {
   addItem() {
     this.add.emit(this.label);
     this.label = '';
-  }
-
-  calc(item: EmployeeData) {
-    console.log('list', this.title);
-    return fibonacci(item.num);
   }
 
 }

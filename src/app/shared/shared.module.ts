@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
 
 import { MaterialModule } from './../material/material.module';
+import { FibonacciPipe } from './pipes/fibonacci.pipe';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { MaterialModule } from './../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
-    CartComponent
+    CartComponent,
+    FibonacciPipe
   ],
   exports: [
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FibonacciPipe
   ],
   imports: [
     CommonModule,

@@ -20,15 +20,11 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        loadChildren: () => {
-          return import('./home/home.module').then(m => m.HomeModule);
-        },
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
       },
       {
         path: 'products',
-        loadChildren: () => {
-          return import('./product/product.module').then(m => m.ProductModule);
-        },
+        loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
       },
       {
         path: 'order',
@@ -38,11 +34,11 @@ const routes: Routes = [
         path: 'demo',
         loadChildren: () => import('./demo/demo.module').then(m => m.DemoModule)
       },
+      {
+        path: 'contact',
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule),
+      },
     ]
-  },
-  {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule),
   },
   {
     path: 'admin',
@@ -62,7 +58,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     enableTracing: false,
-    preloadingStrategy: QuicklinkStrategy
+    preloadingStrategy: QuicklinkStrategy,
+    paramsInheritanceStrategy: 'always',
   })],
   exports: [RouterModule]
 })

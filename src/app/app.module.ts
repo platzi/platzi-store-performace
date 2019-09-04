@@ -25,7 +25,6 @@ import { environment } from './../environments/environment';
   ],
   imports: [
     BrowserModule,
-    QuicklinkModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,

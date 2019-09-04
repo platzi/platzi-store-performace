@@ -10,7 +10,6 @@ import { AdminGuard } from './admin.guard';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
   },
   {
